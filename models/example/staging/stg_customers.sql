@@ -1,8 +1,5 @@
-version: 2
-
-sources:
-  - name: raw
-    database: ANALYTICS_DB
-    schema: ANALYTICS_MT
-    tables:
-      - name: CUSTOMER
+select
+    customer_id,
+    customer_name,
+    city
+from {{ source('raw', 'customers') }}

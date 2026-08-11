@@ -2,6 +2,6 @@ version: 2
 
 sources:
   - name: raw
-    schema: ANALYTICS_MT
+    schema: raw          # actual schema in your warehouse
     tables:
-      - name: CUSTOMER
+      - name: customers  # actual table name
