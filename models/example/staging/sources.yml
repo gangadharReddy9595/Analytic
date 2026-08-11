@@ -2,6 +2,6 @@ version: 2
 
 sources:
   - name: raw
-    schema: raw          # actual schema in your warehouse
+    schema: raw
     tables:
-      - name: customers  # actual table name
+      - name: customers
