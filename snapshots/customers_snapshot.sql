@@ -1,19 +1,3 @@
-{% snapshot customers_snapshot %}
-
-{{
-    config(
-        unique_key='customer_id',
-        strategy='timestamp',
-        updated_at='updated_date'
-    )
-}}
-
-SELECT
-    customer_id,
-    customer_name,
-    city,
-    age,
-    updated_date
-FROM {{ source('raw', 'customers') }}
-
-{% endsnapshot %}
+{% macro calculate_tax(amount) %}
+    {{ amount }} * 0.18
+{% endmacro %}
