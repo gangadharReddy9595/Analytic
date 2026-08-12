@@ -1,17 +1,15 @@
 version: 2
 
-models:
-  - name: stg_customers
-    columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
+sources:
+  - name: raw
+    schema: RAW
+    tables:
+      - name: customers
 
-  - name: stg_orders
-    columns:
-      - name: customer_id
-        tests:
-          - relationships:
-              to: ref('stg_customers')
-              field: customer_id
+      - name: orders
+        columns:
+          - name: customer_id
+            tests:
+              - relationships:
+                  to: source('raw', 'customers')
+                  field: customer_id
