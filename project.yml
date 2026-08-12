@@ -1,0 +1,17 @@
+name: 'ANALYTICS_DB'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ANALYTICS_DB'
+
+seeds:
+  ANALYTICS_DB:
+    +schema: reference
+    +quote_columns: false
+
+snapshots:
+  ANALYTICS_DB:
+    +strategy: timestamp
+    +updated_at: updated_date
+    +unique_key: customer_id
+    +target_schema: SNAPSHOTS

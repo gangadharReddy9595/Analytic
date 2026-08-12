@@ -7,7 +7,7 @@
         updated_at='updated_date'
     )
 }}
-SELECT
+SELECT 
     customer_id,
     customer_name,
     city,
