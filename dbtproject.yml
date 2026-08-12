@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Customer staging model"
+
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
