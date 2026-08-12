@@ -8,7 +8,6 @@ seeds:
   ANALYTICS_DB:
     +schema: reference
     +quote_columns: false
-
 snapshots:
   ANALYTICS_DB:
     +strategy: timestamp
